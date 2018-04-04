@@ -1,4 +1,5 @@
 # Utility Library for Comparing Uint8ClampedArrays
+[![Coverage Status](https://coveralls.io/repos/github/ollelauribostrom/Uint8ClampedArray-utils/badge.svg?branch=master)](https://coveralls.io/github/ollelauribostrom/Uint8ClampedArray-utils?branch=master)
 
 Installation
 -------
