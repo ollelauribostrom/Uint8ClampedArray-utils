@@ -113,7 +113,8 @@ Check if two Uint8ClampedArrays have the same length. Basically a wrapper for `a
   // Pass flag to throw error when called with non Uint8ClampedArray value
   const a = [1, 2, 3];
   const b = new Uint8ClampedArray([1, 2, 3]);
-  hasSameLength(a, b) // => throws Error
+  const throwError = true;
+  hasSameLength(a, b, throwError) // => throws Error
 ```
 
 Running the tests
