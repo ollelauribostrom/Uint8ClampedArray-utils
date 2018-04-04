@@ -79,7 +79,7 @@ export function isEqualSync(a, b, throwError = false) {
 }
 
 /**
- * Async calucate difference between two Uint8ClampedArray
+ * Async calculate difference between two Uint8ClampedArray
  * @param {Uint8ClampedArray} a
  * @param {Uint8ClampedArray} b
  * @return {Object} { differences, diffPercentage }
@@ -105,14 +105,14 @@ export function diff(a, b) {
 }
 
 /**
- * Calucate difference between two Uint8ClampedArray
+ * Calculate difference between two Uint8ClampedArray
  * @param {Uint8ClampedArray} a
  * @param {Uint8ClampedArray} b
  * @return {Object} { differences, diffPercentage }
  */
 export function diffSync(a, b) {
   if (!hasSameLength(a, b, true)) {
-    throw new Error(`Values: ${a}, ${b} does not have same length`)
+    throw new Error(`Values: ${a}, ${b} does not have same length`);
   }
 
   let diffCount = 0;
