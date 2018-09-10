@@ -14,6 +14,7 @@ module.exports = {
       "varsIgnorePattern": "chai|should",
       "ignoreRestSiblings": true,
     }],
+    "object-curly-newline": 0
   },
   "globals": {
     "describe": true,
