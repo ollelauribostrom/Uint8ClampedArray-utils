@@ -47,6 +47,10 @@
   },
   "homepage": "https://github.com/ollelauribostrom/Uint8ClampedArray-utils#readme",
   "jest": {
-    "coverageDirectory": "<rootDir>/test/coverage"
+    "coverageDirectory": "<rootDir>/test/coverage",
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**.js"
+    ]
   }
 }

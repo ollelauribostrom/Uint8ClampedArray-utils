@@ -119,9 +119,9 @@ Check if two Uint8ClampedArrays have the same length. Basically a wrapper for `a
 
 Running the tests
 -----------------
-Tests: `npm test`    
-Coverage: `npm run coverage`    
-Linter: `npm run lint`    
+`yarn test`    
+`yarn coverage`    
+`yarn lint`    
 
 Support
 -------

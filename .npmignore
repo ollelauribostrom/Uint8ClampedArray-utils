@@ -1,3 +1,7 @@
 src
 test
-.idea
+.babelrc
+.editorconfig
+.eslintrc.js
+.npmignore
+.travis.yml
