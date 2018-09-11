@@ -1,6 +1,6 @@
 # Utility Library for Comparing Uint8ClampedArrays
-[![npm version](https://badge.fury.io/js/uint8clampedarray-utils.svg)](https://badge.fury.io/js/uint8clampedarray-utils)
-[![Coverage Status](https://coveralls.io/repos/github/ollelauribostrom/Uint8ClampedArray-utils/badge.svg?branch=master)](https://coveralls.io/github/ollelauribostrom/Uint8ClampedArray-utils?branch=master)
+[![Build Status](https://travis-ci.org/ollelauribostrom/Uint8ClampedArray-utils.svg?branch=master)](https://travis-ci.org/ollelauribostrom/Uint8ClampedArray-utils) 
+[![Coverage Status](https://coveralls.io/repos/github/ollelauribostrom/Uint8ClampedArray-utils/badge.svg?branch=master)](https://coveralls.io/github/ollelauribostrom/Uint8ClampedArray-utils?branch=master) [![npm version](https://badge.fury.io/js/uint8clampedarray-utils.svg)](https://badge.fury.io/js/uint8clampedarray-utils)
 
 Installation
 -------
@@ -54,6 +54,12 @@ Calculate difference between two Uint8ClampedArray.
   const b = new Uint8ClampedArray([1, 2, 3, 5]);
   await diff(a, b) // => { diffCount: 1, diffPercentage: 25 }
 
+  // Set the step size to 4 if you want to check for pixel differences in RGBA array
+  const a = new Uint8ClampedArray([0, 0, 0, 0, 255, 36, 17, 50]);
+  const b = new Uint8ClampedArray([0, 0, 0, 0, 0, 0, 0, 0]);
+  const stepSize = 4;
+  await diff(a, b, stepSize) // => { diffCount: 1, diffPercentage: 50 }
+
   // Promise is rejected on difference in length
   const a = new Uint8ClampedArray([1, 2, 3]);
   const b = new Uint8ClampedArray([1, 2, 3, 4]);
@@ -73,6 +79,12 @@ Calculate difference between two Uint8ClampedArray.
   const a = new Uint8ClampedArray([1, 2, 3, 4]);
   const b = new Uint8ClampedArray([1, 2, 3, 5]);
   diffSync(a, b) // => { diffCount: 1, diffPercentage: 25 }
+
+  // Set the step size to 4 if you want to check for pixel differences in RGBA array
+  const a = new Uint8ClampedArray([0, 0, 0, 0, 255, 36, 17, 50]);
+  const b = new Uint8ClampedArray([0, 0, 0, 0, 0, 0, 0, 0]);
+  const stepSize = 4;
+  diffSync(a, b, stepSize) // => { diffCount: 1, diffPercentage: 50 }
 
   // Throws Error on difference in length
   const a = new Uint8ClampedArray([1, 2, 3]);
